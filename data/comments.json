@@ -36,26 +36,8 @@
 					"name": "Pero Pipovski",
 					"picture": "img/pero.jpg"
 				},
-				"text": "Hey guys, here is a nice web for that comoplicated conversion. www.convertunits.com/from/MB/to/GB",
+				"text": "Hey guys, here is a nice web for that complicated conversion. www.convertunits.com/from/MB/to/GB",
 				"timestamp": 1626861080278
-			},
-			{
-				"id": "6",
-				"author": {
-					"name": "Hrvoje M",
-					"picture": "img/hrc.jpg"
-				},
-				"text": "Yo sup",
-				"timestamp": 1627235462832
-			},
-			{
-				"id": "61",
-				"author": {
-					"name": "Vader",
-					"picture": "img/vader.jpg"
-				},
-				"text": "Hello to the dark side",
-				"timestamp": 1624302116179
 			}
 		]
 	}
