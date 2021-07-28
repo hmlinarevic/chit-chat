@@ -1,0 +1,20 @@
+:root {
+	--blue-color: #023168;
+	--black-color: #333;
+	--black-color--lighter: rgba(0, 0, 0, 0.525);
+}
+
+html {
+	font-size: 62.5%;
+}
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+body {
+	color: var(--black-color);
+	font-family: Arial, Helvetica, sans-serif;
+}
