@@ -1,0 +1,50 @@
+.comment {
+	grid-column: 1 / -1;
+	color: var(--black-color--lighter);
+	font-size: 1.7rem;
+}
+
+.comment.child {
+	grid-column: 2 / -1;
+}
+
+.comment .container {
+	display: grid;
+	column-gap: 1rem;
+	grid-template-columns: auto 1fr;
+}
+
+.comment .author {
+	color: initial;
+	display: block;
+	margin-bottom: 1.2rem;
+}
+
+.comment .text {
+	margin-top: 0;
+	margin-bottom: 1rem;
+}
+
+.comment .text:last-child {
+	margin-bottom: 0;
+}
+
+.comment .footer {
+	grid-column: 2/ -1;
+	font-size: 1.5rem;
+	margin-top: 1rem;
+}
+
+.comment .button {
+	color: var(--blue-color);
+	font-size: inherit;
+	font-weight: 500;
+	border: none;
+	cursor: pointer;
+	transition: 250ms color;
+}
+
+.comment .button:focus,
+.comment .button:hover {
+	color: #045fc8;
+}
