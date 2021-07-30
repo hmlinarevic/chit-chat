@@ -1,4 +1,4 @@
-## Comment feature design implementation
+# Comment feature design implementation
 
 Check out this project repo. Bootstrapped with Create React App.
 Clone & install dependencies.
