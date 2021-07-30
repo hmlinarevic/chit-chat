@@ -1,7 +1,21 @@
 .chat-room {
+	position: relative;
 	width: 960px;
-	min-height: 100vh;
-	background: #eceef1;
+	height: 720px;
+	background: var(--white-color--soft);
+	padding: var(--padding--chat-room);
+	border-radius: 8px;
 	margin: 0 auto;
-	padding: 4rem;
+}
+
+.chat-room__loading {
+	font-family: monospace;
+	font-size: var(--font-size--small);
+}
+
+.chat-room__content {
+	display: block;
+	height: 100%;
+	overflow: auto;
+	padding-bottom: 4rem;
 }
