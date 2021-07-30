@@ -1,20 +1,24 @@
 import Avatar from '../UI/Avatar';
-import Card from '../UI/Card';
 import Button from '../UI/Button';
+import Card from '../UI/Card';
 import classes from './UserComment.module.css';
 import { getCommentPostTime } from '../../helpers/comment';
 
 export default function UserComment({
+	parent_id,
 	author,
 	text,
-	parent_id,
 	timestamp,
-	timesReplied,
+	replyCount,
+	isReply,
 }) {
 	return (
 		<div className={`${classes.comment} ${parent_id ? classes.child : ''}`}>
-			<div className={classes.container}>
-				<Avatar picture={author.picture} />
+			<div className={classes.content}>
+				<Avatar
+					picture={author.picture}
+					className={isReply ? 'avatar--reply' : ''}
+				/>
 				<Card>
 					<span className={classes.author}>{author.name}</span>
 					<p className={classes.text}>{text}</p>
@@ -23,7 +27,7 @@ export default function UserComment({
 					{getCommentPostTime(timestamp)}{' '}
 					<span className={classes.dot}>&#183;</span>
 					<Button className={classes.button}>
-						Reply {timesReplied > 0 ? `(${timesReplied})` : ''}
+						Reply {replyCount > 0 ? `(${replyCount})` : ''}
 					</Button>
 				</footer>
 			</div>

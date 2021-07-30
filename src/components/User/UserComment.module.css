@@ -1,14 +1,14 @@
 .comment {
 	grid-column: 1 / -1;
-	color: var(--black-color--lighter);
-	font-size: 1.7rem;
+	max-width: 72rem;
+	color: var(--black-color--soft);
 }
 
 .comment.child {
 	grid-column: 2 / -1;
 }
 
-.comment .container {
+.comment .content {
 	display: grid;
 	column-gap: 1rem;
 	grid-template-columns: auto 1fr;
@@ -17,7 +17,7 @@
 .comment .author {
 	color: initial;
 	display: block;
-	margin-bottom: 1.2rem;
+	margin-bottom: 0.8rem;
 }
 
 .comment .text {
@@ -31,20 +31,22 @@
 
 .comment .footer {
 	grid-column: 2/ -1;
-	font-size: 1.5rem;
+	font-size: var(--font-size--small);
 	margin-top: 1rem;
 }
 
 .comment .button {
+	background: none;
 	color: var(--blue-color);
 	font-size: inherit;
 	font-weight: 500;
 	border: none;
 	cursor: pointer;
-	transition: 250ms color;
+	padding: 1px 4px;
 }
 
 .comment .button:focus,
 .comment .button:hover {
-	color: #045fc8;
+	background: initial;
+	color: var(--blue-color--hover);
 }
