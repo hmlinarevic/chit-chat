@@ -2,16 +2,15 @@
 	margin-bottom: 6rem;
 }
 
-.chat-day .date {
+.chat-day__date {
 	display: block;
-	color: rgba(0, 0, 0, 0.525);
+	color: var(--black-color--soft);
+	font-size: var(--font-size--smaller);
 	text-align: center;
-	font-size: 1.4rem;
-	font-weight: 400;
 	margin-bottom: 4rem;
 }
 
-.chat-day .grid {
+.chat-day__grid {
 	display: grid;
 	row-gap: 3rem;
 	grid-template-columns: repeat(12, 1fr);
