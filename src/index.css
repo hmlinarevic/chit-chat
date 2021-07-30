@@ -1,7 +1,27 @@
 :root {
-	--blue-color: #023168;
+	--font-family--main: Arial, Helvetica, sans-serif;
+
+	--font-size--large: 2rem;
+	--font-size--regular: 1.7rem;
+	--font-size--small: 1.4rem;
+	--font-size--smaller: 1.2rem;
+
+	--white-color: #fff;
+	--white-color--soft: #eceef1;
 	--black-color: #333;
-	--black-color--lighter: rgba(0, 0, 0, 0.525);
+	--black-color--soft: rgba(0, 0, 0, 0.525);
+	--blue-color: #023168;
+	--blue-color--hover: #045fc8;
+
+	--box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.1);
+
+	--padding--chat-room: 4rem;
+}
+
+#root {
+	height: 100vh;
+	display: grid;
+	place-content: center;
 }
 
 html {
@@ -16,5 +36,8 @@ html {
 
 body {
 	color: var(--black-color);
-	font-family: Arial, Helvetica, sans-serif;
+	font-family: var(--font-family--main);
+	font-size: var(--font-size--regular);
+	line-height: 1.4;
+	margin: 0;
 }
