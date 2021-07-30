@@ -1,0 +1,29 @@
+.chat-form {
+	position: absolute;
+	bottom: 4rem;
+	width: calc(100% - (var(--padding--chat-room) * 2));
+	background: var(--white-color);
+	box-shadow: var(--box-shadow);
+	border-radius: 8px;
+	padding: 0.6rem;
+	margin: 0 auto;
+	display: grid;
+	grid-template-columns: auto 1fr auto;
+}
+
+.chat-form input {
+	color: var(--black-color--soft);
+	font-size: var(--font-size--regular);
+	border: none;
+	outline: none;
+	padding: 0 1rem;
+}
+
+.chat-form .button--add {
+	font-size: var(--font-size--large);
+}
+
+.chat-form .button--send img {
+	width: 20px;
+	margin-right: 1rem;
+}
