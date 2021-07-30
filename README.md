@@ -1,7 +1,6 @@
-# Comment feature design implementation
+# Comment feature implementation
 
-Check out this project repo. Bootstrapped with Create React App.
-Clone & install dependencies.
+Clone & install dependencies. Bootstrapped with Create React App.
 
 ## Available Script
 
