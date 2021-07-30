@@ -1,4 +1,4 @@
-import { getDateFromTimestamp } from './date';
+import { getDateParts } from './date';
 
 export const adjustComments = comments => {
 	sortByTimestamp(comments);
@@ -15,7 +15,7 @@ const sortByTimestamp = comments => {
 const addFullDateProp = comments => {
 	const propName = 'fullDate';
 	comments.forEach(comment => {
-		const [, day, month, year] = getDateFromTimestamp(comment);
+		const [, day, month, year] = getDateParts(comment);
 		comment[propName] = `${day}-${month < 10 ? '0' + month : month}-${year}`;
 	});
 };
@@ -49,4 +49,11 @@ export const getCommentPostTime = timestamp => {
 		minute: 'numeric',
 		hour12: true,
 	});
+};
+
+export const addClassIfCommentIsReply = chat => {
+	const comment = chat.find(comment => comment.parent_id);
+	if (comment) {
+		comment.isReply = true;
+	}
 };
