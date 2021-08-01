@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
-import { createChat } from '../../helpers/chat';
-import ChatRoom from '../Chat/ChatRoom';
+import { createChat } from './helpers/chat';
+import ChatRoom from './components/Chat/ChatRoom';
 
 export default function App() {
 	const [comments, setComments] = useState();
