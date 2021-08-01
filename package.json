@@ -17,9 +17,7 @@
 	},
 	"proxy": "http://localhost:5000",
 	"scripts": {
-		"start": "react-scripts start",
-		"json-server": "json-server --watch ./data/comments.json --port 5000",
-		"dev": "concurrently \"npm start\" \"npm run json-server\"",
+		"start": "concurrently \"node src/server.js\" \"react-scripts start\"",
 		"build": "react-scripts build",
 		"test": "react-scripts test",
 		"eject": "react-scripts eject"
