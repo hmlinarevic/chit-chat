@@ -1,24 +1,45 @@
 {
 	"name": "chit-chat",
-	"version": "1.0.0",
-	"description": "",
-	"main": "index.js",
-	"scripts": {
-		"start": "node index.js",
-		"heroku-postbuild": "cd client && npm install && npm run build"
+	"version": "0.1.0",
+	"private": true,
+	"engines": {
+		"node": "16.x"
 	},
-	"repository": {
-		"type": "git",
-		"url": "git+https://github.com/hmlinarevic/chit-chat.git"
-	},
-	"keywords": [],
-	"author": "",
-	"license": "ISC",
-	"bugs": {
-		"url": "https://github.com/hmlinarevic/chit-chat/issues"
-	},
-	"homepage": "https://github.com/hmlinarevic/chit-chat#readme",
 	"dependencies": {
-		"express": "^4.17.1"
+		"@testing-library/jest-dom": "^5.14.1",
+		"@testing-library/react": "^11.2.7",
+		"@testing-library/user-event": "^12.8.3",
+		"react": "^17.0.2",
+		"react-dom": "^17.0.2",
+		"react-scripts": "4.0.3",
+		"web-vitals": "^1.1.2",
+		"concurrently": "^6.2.0",
+		"json-server": "^0.16.3"
+	},
+	"proxy": "http://localhost:5000",
+	"scripts": {
+		"start": "concurrently \"node src/server.js\" \"react-scripts start\"",
+		"build": "react-scripts build",
+		"test": "react-scripts test",
+		"eject": "react-scripts eject",
+		"heroku-postbuild": "npm run build && node src/server.js"
+	},
+	"eslintConfig": {
+		"extends": [
+			"react-app",
+			"react-app/jest"
+		]
+	},
+	"browserslist": {
+		"production": [
+			">0.2%",
+			"not dead",
+			"not op_mini all"
+		],
+		"development": [
+			"last 1 chrome version",
+			"last 1 firefox version",
+			"last 1 safari version"
+		]
 	}
 }
