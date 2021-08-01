@@ -3,9 +3,9 @@ import ChatForm from './ChatForm';
 import { getKey } from '../../helpers/tools';
 import classes from './ChatRoom.module.css';
 
-export default function ChatRoom({ isLoading, chat, onAddComment }) {
-	const openChat = (chat, key) => chat[key];
+const openChat = (chat, key) => chat[key];
 
+export default function ChatRoom({ isLoading, chat, onAddComment }) {
 	return (
 		<section className={classes['chat-room']}>
 			<div className={classes['chat-room__content']}>
