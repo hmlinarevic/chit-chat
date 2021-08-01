@@ -12,9 +12,9 @@ export default function App() {
 	useEffect(() => {
 		setTimeout(() => {
 			const getComments = async () => {
-				const res = await fetch('/data');
+				const res = await fetch('/comments');
 				const data = await res.json();
-				const { comments } = data;
+				const { comments } = data.data;
 				setComments(comments);
 			};
 			getComments();
