@@ -4,7 +4,9 @@
 	"description": "",
 	"main": "index.js",
 	"scripts": {
-		"start": "node index.js",
+		"start": "concurrently \"npm run startServer\" \"npm run startClient\"",
+		"startServer": "node server/index.js",
+		"startClient": "cd client && npm start",
 		"heroku-postbuild": "cd client && npm install && npm run build"
 	},
 	"repository": {
@@ -20,5 +22,8 @@
 	"homepage": "https://github.com/hmlinarevic/chit-chat#readme",
 	"dependencies": {
 		"express": "^4.17.1"
+	},
+	"devDependencies": {
+		"concurrently": "^6.2.0"
 	}
 }
