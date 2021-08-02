@@ -1,17 +1,21 @@
 const path = require('path');
 const express = require('express');
 
+const commentsDataPath = path.join(__dirname, '../data/comments.json');
+const clientBuildPath = path.join(__dirname, '../client/build');
+const clientBuildIndexHTML = path.join(__dirname, '/client/build/index.html');
+
 const app = express();
 const port = process.env.PORT || 5000;
 
-app.use(express.static(path.join(__dirname, 'client/build')));
+app.use(express.static(clientBuildPath));
 
 app.get('/comments', (req, res) => {
-	res.sendFile(path.resolve('./data/comments.json'));
+	res.sendFile(commentsDataPath);
 });
 
 app.get('/*', (req, res) => {
-	res.sendFile(path.join(__dirname, '/client/build/index.html'));
+	res.sendFile(clientBuildIndexHTML);
 });
 
 app.listen(port);
