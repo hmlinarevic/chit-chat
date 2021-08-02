@@ -1,5 +1,3 @@
-# CHIT-CHAT
-
 ## Comment design implementation
 
 This project was bootstrapped with Create React App.
