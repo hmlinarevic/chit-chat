@@ -10,13 +10,9 @@ const port = process.env.PORT || 5000;
 
 app.use(express.static(clientBuildPath));
 
-app.get('/comments', (req, res) => {
-	res.sendFile(commentsDataPath);
-});
+app.get('/comments', (req, res) => res.sendFile(commentsDataPath));
 
-app.get('/*', (req, res) => {
-	res.sendFile(clientBuildIndexHTML);
-});
+app.get('/*', (req, res) => res.sendFile(clientBuildIndexHTML));
 
 app.listen(port);
 
